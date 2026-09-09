@@ -18,7 +18,7 @@
 
   .post-list{padding:20px 0 100px;}
   .post-row{
-    display:grid;grid-template-columns:110px 1fr;gap:28px;
+    display:grid;grid-template-columns:150px 100px 1fr;gap:24px;align-items:start;
     padding:34px 24px;border-bottom:1px solid var(--line);
     text-decoration:none;color:inherit;
     transition:transform .18s ease, opacity .18s ease, background .18s ease;
@@ -27,8 +27,10 @@
   .post-row:first-child{border-top:1px solid var(--line);}
   .post-list:hover .post-row{opacity:.55;}
   .post-list:hover .post-row:hover{opacity:1;background:var(--panel);transform:scale(1.02);}
+  .post-thumb{width:100%;aspect-ratio:4/3;background-color:var(--paper-deep);background-size:cover;background-position:center;border:1px solid var(--line);flex:none;}
   @media(max-width:640px){
-    .post-row{grid-template-columns:1fr;gap:10px;padding:26px 16px;}
+    .post-row{grid-template-columns:1fr;gap:12px;padding:26px 16px;}
+    .post-thumb{aspect-ratio:16/9;}
     .post-list:hover .post-row{opacity:1;}
     .post-list:hover .post-row:hover{transform:none;}
   }
@@ -56,6 +58,7 @@
   <div class="wrap post-list" id="postList">
 
     <a class="post-row" href="https://gozhakaneren.blogspot.com/2020/07/dunyagoz-katarakt-tedavisinde-yeni.html" target="_blank" rel="noopener" data-date="2020-07-15">
+      <span class="post-thumb" style="background-image:url('/assets/images/blog/trifokal-mercek.jpg')"></span>
       <span class="post-date lang-tr">Temmuz 2020</span><span class="post-date lang-en">July 2020</span>
       <span class="post-body">
         <span class="lang-tr">
@@ -71,6 +74,7 @@
     </a>
 
     <a class="post-row" href="https://gozhakaneren.blogspot.com/2019/09/kisiye-ozel-lazer-ilasik.html" target="_blank" rel="noopener" data-date="2019-09-09">
+      <span class="post-thumb" style="background-image:url('/assets/images/blog/keratokonus.jpg')"></span>
       <span class="post-date lang-tr">Eylül 2019</span><span class="post-date lang-en">September 2019</span>
       <span class="post-body">
         <span class="lang-tr">
@@ -86,6 +90,7 @@
     </a>
 
     <a class="post-row" href="https://gozhakaneren.blogspot.com/2018/11/goz-segirmesinin-sebepleri-nelerdir.html" target="_blank" rel="noopener" data-date="2018-11-05">
+      <span class="post-thumb" style="background-image:url('/assets/images/blog/goz-segirmesi.jpg')"></span>
       <span class="post-date lang-tr">Kasım 2018</span><span class="post-date lang-en">November 2018</span>
       <span class="post-body">
         <span class="lang-tr">
@@ -101,6 +106,7 @@
     </a>
 
     <a class="post-row" href="https://gozhakaneren.blogspot.com/2018/10/yanlis-kontakt-lens-kullanimi.html" target="_blank" rel="noopener" data-date="2018-10-24">
+      <span class="post-thumb" style="background-image:url('/assets/images/blog/kontakt-lens.jpg')"></span>
       <span class="post-date lang-tr">Ekim 2018</span><span class="post-date lang-en">October 2018</span>
       <span class="post-body">
         <span class="lang-tr">
@@ -116,6 +122,7 @@
     </a>
 
     <a class="post-row" href="https://gozhakaneren.blogspot.com/2014/12/what-is-lensar-how-does-it-improve-my.html" target="_blank" rel="noopener" data-date="2014-12-14">
+      <span class="post-thumb" style="background-image:url('/assets/images/blog/femtosaniye-lazer.jpg')"></span>
       <span class="post-date lang-tr">Aralık 2014</span><span class="post-date lang-en">December 2014</span>
       <span class="post-body">
         <span class="lang-tr">
@@ -131,6 +138,7 @@
     </a>
 
     <a class="post-row" href="https://gozhakaneren.blogspot.com/2012/11/glokom-goz-tansiyonu-hastalg-nedir-halk.html" target="_blank" rel="noopener" data-date="2012-11-07">
+      <span class="post-thumb" style="background-image:url('/assets/images/blog/glokom-nedir.jpg')"></span>
       <span class="post-date lang-tr">Kasım 2012</span><span class="post-date lang-en">November 2012</span>
       <span class="post-body">
         <span class="lang-tr">
