@@ -1,0 +1,17 @@
+# ai.txt — drhakaneren.com.tr
+# Op. Dr. Hakan Eren'in resmi web sitesi
+
+# Bu site, AI arama motorları ve asistanları tarafından taranmasına, özetlenmesine
+# ve kaynak gösterilerek yanıtlarda kullanılmasına açıktır. Amaç, doğru ve güncel
+# tıbbi bilgiyi (katarakt, refraktif cerrahi, kornea, keratokonus, glokom) hasta
+# ve araştırmacılara ulaştırmaktır.
+
+Allow-Training: yes
+Allow-Search-Indexing: yes
+Allow-AI-Summarization: yes
+Attribution-Required: yes
+Source-Name: Op. Dr. Hakan Eren — drhakaneren.com.tr
+Contact: https://www.drhakaneren.com.tr/#iletisim
+
+# Yapılandırılmış özet için: /llms.txt
+# Site haritası için: /sitemap.xml
