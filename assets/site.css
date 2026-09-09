@@ -29,8 +29,8 @@ header.site-header{position:sticky;top:0;z-index:40;background:rgba(232,228,214,
 nav.primary{display:flex;align-items:center;gap:26px;}
 nav.primary a{text-decoration:none;font-size:.95rem;color:var(--ink-soft);padding:4px 0;border-bottom:1px solid transparent;}
 nav.primary a:hover, nav.primary a.active{color:var(--ink-deep);border-color:var(--brass);}
-.cta-btn{background:var(--ink-deep);color:var(--panel);text-decoration:none;padding:11px 22px;border-radius:2px;font-size:.92rem;font-weight:600;border:1px solid var(--ink-deep);cursor:pointer;}
-.cta-btn:hover{background:var(--brass-deep);border-color:var(--brass-deep);}
+.cta-btn, a.cta-btn:link, a.cta-btn:visited{background:var(--ink-deep);color:#FBFAF5;text-decoration:none;padding:11px 22px;border-radius:2px;font-size:.92rem;font-weight:600;border:1px solid var(--ink-deep);cursor:pointer;display:inline-block;}
+.cta-btn:hover, a.cta-btn:hover, a.cta-btn:focus{background:var(--brass-deep);border-color:var(--brass-deep);color:#FBFAF5;}
 .lang-toggle{display:flex;border:1px solid var(--ink-deep);border-radius:2px;overflow:hidden;font-size:.82rem;font-weight:600;}
 .lang-toggle button{background:none;border:none;padding:7px 12px;cursor:pointer;color:var(--ink-soft);font-family:'Archivo',sans-serif;}
 .lang-toggle button.active{background:var(--ink-deep);color:var(--white);}
@@ -54,3 +54,15 @@ footer.site-footer{padding:34px 0;border-top:1px solid var(--line);}
 .wa-float:hover{transform:scale(1.06);}
 .wa-float svg{width:28px;height:28px;fill:#fff;}
 @media(max-width:600px){.wa-float{right:16px;bottom:16px;width:52px;height:52px;}}
+
+/* ============ Blog yazısı sayfaları ============ */
+.article-head{padding:56px 0 0;max-width:760px;}
+.back-link{display:inline-block;font-size:.88rem;color:var(--ink-soft);text-decoration:none;margin-bottom:26px;border-bottom:1px solid transparent;}
+.back-link:hover{color:var(--brass-deep);border-color:var(--brass-deep);}
+.article-thumb{width:100%;aspect-ratio:16/9;background-color:var(--paper-deep);background-size:cover;background-position:center;border:1px solid var(--line);margin-bottom:30px;}
+.article-head h1{font-size:clamp(1.8rem,3.6vw,2.5rem);line-height:1.2;}
+.article-meta{margin-top:16px;font-family:'Lora',serif;font-style:italic;color:var(--brass-deep);font-size:.95rem;}
+.article-body{max-width:700px;padding:34px 0 100px;}
+.article-body p{color:var(--ink);font-size:1.03rem;}
+.article-body .lang-tr, .article-body .lang-en{display:block;}
+.source-note{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:.85rem;color:var(--ink-soft);}
