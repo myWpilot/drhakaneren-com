@@ -1,0 +1,56 @@
+/* ============ Ortak tasarım tokenleri ============ */
+:root{
+  --ink:#1E3A38; --ink-deep:#122624; --ink-soft:#4B6360;
+  --paper:#E8E4D6; --paper-deep:#DBD5C0; --panel:#F7F5EC;
+  --brass:#A9762E; --brass-deep:#7C5620; --line:#C7C0A6; --white:#FBFAF5;
+  --max:1120px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--paper);color:var(--ink-deep);font-family:'Archivo',sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+h1,h2,h3,.serif{font-family:'Lora',serif;font-weight:600;color:var(--ink-deep);margin:0;}
+p{margin:0 0 1em;}
+a{color:inherit;}
+img{max-width:100%;display:block;}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px;}
+a:focus-visible,button:focus-visible{outline:2px solid var(--brass-deep);outline-offset:3px;}
+@media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important;scroll-behavior:auto !important;}}
+
+/* ============ Dil geçişi (TR / EN) ============ */
+/* body[data-lang="tr"] Türkçe blokları gösterir, İngilizce olanları gizler; tersi de geçerli. */
+body[data-lang="tr"] .lang-en{display:none;}
+body[data-lang="en"] .lang-tr{display:none;}
+
+/* ============ Header / Nav ============ */
+header.site-header{position:sticky;top:0;z-index:40;background:rgba(232,228,214,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+.nav-row{display:flex;align-items:center;justify-content:space-between;padding:18px 0;}
+.brand{font-family:'Lora',serif;font-weight:600;font-size:1.18rem;text-decoration:none;color:var(--ink-deep);}
+.brand span{color:var(--brass-deep);}
+nav.primary{display:flex;align-items:center;gap:26px;}
+nav.primary a{text-decoration:none;font-size:.95rem;color:var(--ink-soft);padding:4px 0;border-bottom:1px solid transparent;}
+nav.primary a:hover, nav.primary a.active{color:var(--ink-deep);border-color:var(--brass);}
+.cta-btn{background:var(--ink-deep);color:var(--panel);text-decoration:none;padding:11px 22px;border-radius:2px;font-size:.92rem;font-weight:600;border:1px solid var(--ink-deep);cursor:pointer;}
+.cta-btn:hover{background:var(--brass-deep);border-color:var(--brass-deep);}
+.lang-toggle{display:flex;border:1px solid var(--ink-deep);border-radius:2px;overflow:hidden;font-size:.82rem;font-weight:600;}
+.lang-toggle button{background:none;border:none;padding:7px 12px;cursor:pointer;color:var(--ink-soft);font-family:'Archivo',sans-serif;}
+.lang-toggle button.active{background:var(--ink-deep);color:var(--white);}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;}
+.menu-toggle span{display:block;width:24px;height:2px;background:var(--ink-deep);margin:5px 0;}
+@media(max-width:900px){
+  nav.primary{position:absolute;top:100%;left:0;right:0;background:var(--panel);flex-direction:column;align-items:flex-start;gap:0;border-bottom:1px solid var(--line);max-height:0;overflow:hidden;transition:max-height .25s ease;}
+  nav.primary.open{max-height:460px;}
+  nav.primary a{width:100%;padding:14px 28px;border-bottom:1px solid var(--line);}
+  nav.primary .cta-btn{margin:16px 28px;}
+  nav.primary .lang-toggle{margin:4px 28px 16px;}
+  .menu-toggle{display:block;}
+}
+
+/* ============ Footer ============ */
+footer.site-footer{padding:34px 0;border-top:1px solid var(--line);}
+.foot-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:.85rem;color:var(--ink-soft);}
+
+/* ============ WhatsApp sabit buton ============ */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.28);text-decoration:none;transition:transform .15s ease;}
+.wa-float:hover{transform:scale(1.06);}
+.wa-float svg{width:28px;height:28px;fill:#fff;}
+@media(max-width:600px){.wa-float{right:16px;bottom:16px;width:52px;height:52px;}}
