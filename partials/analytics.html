@@ -1,8 +1,9 @@
 <!-- Google Search Console: HTML dosya yöntemiyle doğrulandı
      (bkz. repo kökündeki googlef7deeeb9bda73a9e.html) — burada ek bir şey gerekmiyor. -->
 
-<!-- Google tag (gtag.js) — sayfa tamamen yüklendikten SONRA devreye girer,
-     böylece ilk boyama / LCP / Speed Index'i hiç etkilemez. -->
+<!-- Google tag (gtag.js) — ilk kullanıcı etkileşiminde (scroll/touch/click) devreye girer.
+     Böylece gerçek ziyaretçiler doğru şekilde ölçülür, ama sayfa yükleme
+     performansını (ve Lighthouse/PageSpeed testlerini) hiç etkilemez. -->
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <link rel="preconnect" href="https://www.google-analytics.com">
 <script>
@@ -10,10 +11,25 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-01DH8KENP1');
-  window.addEventListener('load', function () {
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-01DH8KENP1';
-    document.head.appendChild(s);
-  });
+
+  (function () {
+    var loaded = false;
+    function loadGA() {
+      if (loaded) return;
+      loaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-01DH8KENP1';
+      document.head.appendChild(s);
+      events.forEach(function (ev) {
+        window.removeEventListener(ev, loadGA, { passive: true });
+      });
+    }
+    var events = ['scroll', 'touchstart', 'mousemove', 'keydown', 'click'];
+    events.forEach(function (ev) {
+      window.addEventListener(ev, loadGA, { passive: true, once: true });
+    });
+    // Etkileşim hiç olmazsa (nadir), 8 sn sonra yine de yükle.
+    setTimeout(loadGA, 8000);
+  })();
 </script>
