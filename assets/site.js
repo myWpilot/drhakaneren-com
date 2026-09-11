@@ -50,6 +50,14 @@
   }
 
   document.addEventListener('DOMContentLoaded', function(){
+    // Build adımı header/footer'ı zaten sayfanın içine gömdüyse (dist/ çıktısı),
+    // tekrar fetch etmeye gerek yok — doğrudan bağla.
+    if (document.querySelector('[data-primary-nav]')) {
+      wireHeader();
+      applyLang(getLang());
+      document.dispatchEvent(new CustomEvent('partialsLoaded'));
+      return;
+    }
     var pending = 2;
     function done(){
       pending--;
