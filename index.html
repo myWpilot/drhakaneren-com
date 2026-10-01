@@ -88,8 +88,8 @@
 </script>
 
 <style>
-  section{padding:96px 0;}
-  @media(max-width:720px){section{padding:64px 0;}}
+  section{padding:120px 0;}
+  @media(max-width:720px){section{padding:76px 0;}}
 
   .hero{padding:80px 0 60px;overflow:hidden;}
   .hero-grid{display:grid;grid-template-columns:1.05fr .85fr;gap:56px;align-items:center;}
@@ -103,10 +103,10 @@
   .btn-outline{text-decoration:none;padding:11px 22px;border:1px solid var(--ink-deep);border-radius:2px;font-size:.92rem;font-weight:600;color:var(--ink-deep);}
   .btn-outline:hover{border-color:var(--brass-deep);color:var(--brass-deep);}
 
-  .hero-photo{background:var(--white);border:1px solid var(--line);padding:18px;position:relative;}
-  .hero-photo .frame{aspect-ratio:4/5;background:var(--paper-deep);display:flex;align-items:center;justify-content:center;color:var(--ink-soft);font-family:'Lora',serif;font-style:italic;font-size:.95rem;text-align:center;padding:20px;overflow:hidden;}
-  .hero-photo .frame img{width:100%;height:100%;object-fit:cover;}
-  .hero-photo .tag{position:absolute;bottom:-14px;left:24px;background:var(--brass-deep);color:var(--white);font-family:'Archivo',sans-serif;font-size:.78rem;padding:8px 16px;}
+  .hero-photo{position:relative;}
+  .hero-photo .frame{aspect-ratio:4/5;border-radius:20px;overflow:hidden;box-shadow:0 24px 48px -12px rgba(18,38,36,.28);}
+  .hero-photo .frame img{width:100%;height:100%;object-fit:cover;display:block;}
+  .hero-photo .cap{margin-top:16px;font-family:'Archivo',sans-serif;font-size:.82rem;color:var(--ink-soft);letter-spacing:.02em;}
 
   .chart{background:var(--white);border:1px solid var(--line);padding:26px 24px;text-align:center;position:relative;}
   .chart::before{content:'';position:absolute;inset:8px;border:1px solid var(--paper-deep);pointer-events:none;}
@@ -115,7 +115,8 @@
 
   .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;}
   @media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:36px;}}
-  .section-head h2{font-size:clamp(1.7rem,3vw,2.3rem);}
+  .section-head h2{font-size:clamp(2rem,3.6vw,2.8rem);}
+  .section-head{margin-bottom:6px;}
   .rule{width:52px;height:2px;background:var(--brass);margin-bottom:22px;}
   .about-body p{color:var(--ink);}
   .quote{font-family:'Lora',serif;font-style:italic;font-size:1.15rem;line-height:1.65;color:var(--ink-deep);border-left:2px solid var(--brass);padding-left:22px;margin:28px 0;}
@@ -201,7 +202,8 @@
           <div class="frame">
             <img src="/assets/images/hakan-eren.jpg" alt="Op. Dr. Hakan Eren" width="305" height="301">
           </div>
-          <span class="tag">Op. Dr. Hakan Eren</span>
+          <p class="cap lang-tr">Op. Dr. Hakan Eren — Dünya Göz Etiler</p>
+          <p class="cap lang-en">Op. Dr. Hakan Eren — Dünya Göz Etiler</p>
         </div>
         <div class="chart" style="margin-top:34px;" aria-hidden="true">
           <div class="row" style="font-size:1.8rem;letter-spacing:.4em;">F P T</div>
