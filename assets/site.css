@@ -24,16 +24,16 @@ body[data-lang="en"] .lang-tr{display:none;}
 /* ============ Header / Nav ============ */
 header.site-header{position:sticky;top:0;z-index:40;background:rgba(232,228,214,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
 .nav-row{display:flex;align-items:center;justify-content:space-between;padding:18px 0;}
-.brand{font-family:'Lora',serif;font-weight:600;font-size:1.4rem;text-decoration:none;color:var(--ink-deep);}
+.brand{font-family:'Lora',serif;font-weight:600;font-size:1.6rem;text-decoration:none;color:var(--ink-deep);white-space:nowrap;flex:none;margin-right:32px;}
 .brand span{color:var(--brass-deep);}
 nav.primary{display:flex;align-items:center;gap:26px;}
 nav.primary a{text-decoration:none;font-size:.95rem;color:var(--ink-soft);padding:4px 0;border-bottom:1px solid transparent;}
 nav.primary a:hover, nav.primary a.active{color:var(--ink-deep);border-color:var(--brass);}
 .cta-btn, a.cta-btn:link, a.cta-btn:visited{background:var(--ink-deep);color:#FBFAF5;text-decoration:none;padding:11px 22px;border-radius:2px;font-size:.92rem;font-weight:600;border:1px solid var(--ink-deep);cursor:pointer;display:inline-block;}
 .cta-btn:hover, a.cta-btn:hover, a.cta-btn:focus{background:var(--brass-deep);border-color:var(--brass-deep);color:#FBFAF5;}
-.lang-toggle{display:flex;border:1px solid var(--ink-deep);border-radius:2px;overflow:hidden;font-size:.82rem;font-weight:600;}
+.lang-toggle{display:flex;border:1px solid var(--brass-deep);border-radius:2px;overflow:hidden;font-size:.82rem;font-weight:600;}
 .lang-toggle button{background:none;border:none;padding:7px 12px;cursor:pointer;color:var(--ink-soft);font-family:'Archivo',sans-serif;}
-.lang-toggle button.active{background:var(--ink-deep);color:var(--white);}
+.lang-toggle button.active{background:var(--brass-deep);color:var(--white);}
 .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;}
 .menu-toggle span{display:block;width:24px;height:2px;background:var(--ink-deep);margin:5px 0;}
 @media(max-width:900px){
@@ -66,4 +66,3 @@ footer.site-footer{padding:34px 0;border-top:1px solid var(--line);}
 .article-body p{color:var(--ink);font-size:1.03rem;}
 .article-body .lang-tr, .article-body .lang-en{display:block;}
 .source-note{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:.85rem;color:var(--ink-soft);}
-
